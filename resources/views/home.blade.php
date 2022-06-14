@@ -5,44 +5,44 @@
 @extends('layouts.billboard')
 
 @section('content')
-    <div class="container" style="margin-top: 10px;margin-bottom: 10px;font-family:'IRAN Sans','Century Gothic'">
+    <div class="container">
         <div class="row">
             <div class="col-md-8">
                 @foreach($movies as $movie)
-                    <div class="card mb-3">
-                        <a href="{{route('movies.show',$movie->id)}}" style="text-decoration: none;"><h2 class="card-header" style="background-color: #14bf98;color: white;font-family:'IRAN Sans','Century Gothic'" >{{$movie->name}}</h2></a>
+                    <div class="card mb-3 show-movie">
+                        <a href="{{route('movies.show',$movie->id)}}"><h2 class="card-header">{{$movie->name}}</h2></a>
                         <img class="card-img-top" src="{{asset($movie->pic)}}" alt="Card image cap">
-                        <div class="card-body" style="text-align: right; direction: rtl; background-color: #14bf98;">
-                            <p class="card-text" style="color: white">{{$movie->description}}</p>
+                        <div class="card-body card-body-movie">
+                            <p class="card-text">{{$movie->description}}</p>
                             <br>
                             <div class="row" >
                                 <div class="col-sm-8">
-                                    <h5 style="color: white;font-family:'IRAN Sans','Century Gothic'">کارگردان : {{$movie->director()->name}}</h5>
+                                    <h5>کارگردان : {{$movie->director()->name}}</h5>
                                 </div>
                                 <div class="col-sm-3" >
-                                    <h5 style="color: white;font-family:'IRAN Sans','Century Gothic'"><span><i class="fa fa-star" aria-hidden="true" style="color: gold"></i> {{$movie->score}}/10</span></h5>
+                                    <h5><span><i class="fa fa-star" aria-hidden="true"></i> {{$movie->score}}/10</span></h5>
                                 </div>
                                 <div class="col-sm-3">
-                                    <h5 style="color: white;font-family:'IRAN Sans','Century Gothic'"> ژانر : {{$movie->genre}}</h5>
+                                    <h5> ژانر : {{$movie->genre}}</h5>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 @endforeach
             </div>
+
             <div class="col-md-4">
                 @foreach($serials as $serial)
-                    <div class="card">
-                        <a href="{{route('serials.show',$serial->id)}}" style="text-decoration: none"><h5 class="card-header" style="background-color: #14bf98;color: white;font-family:'IRAN Sans','Century Gothic';">{{$serial->name}}</h5></a>
+                    <div id="show-serial" class="card">
+                        <a href="{{route('serials.show',$serial->id)}}"><h5 class="card-header">{{$serial->name}}</h5></a>
                         <img class="card-img-top" src="{{asset($serial->pic)}}" alt="Card image cap">
-                        <div class="card-body" style="text-align: right;direction: rtl;background-color: #14bf98;color: white">
+                        <div id="card-serial" class="card-body">
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <h5 style="color: white;font-family:'IRAN Sans','Century Gothic'"> ژانر : {{$serial->genre}}</h5>
+                                    <h5> ژانر : {{$serial->genre}}</h5>
                                 </div>
                                 <div class="col-sm-5">
-                                    <h5 style="color: white;font-family:'IRAN Sans','Century Gothic'"><span><i class="fa fa-star" aria-hidden="true" style="color: gold"></i> {{$serial->score}}/10</span></h5>
+                                    <h5><span><i class="fa fa-star" aria-hidden="true"></i> {{$serial->score}}/10</span></h5>
                                 </div>
                             </div>
                         </div>

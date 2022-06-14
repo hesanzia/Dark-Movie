@@ -39,7 +39,7 @@
 </div>
 
 <!--Navbar -->
-<nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top" style="direction: rtl;" >
+<nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
     <a class="navbar-brand logo-text page-scroll" href="{{route('home')}}"><img src="{{asset('Image/Backgound/2_1.png')}}"></a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="container h-100">
@@ -53,11 +53,10 @@
             </div>
         </div>
     </div>
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault" style="direction: rtl;">
-
-        <form class="form-inline" method="get" action="{{route('search')}}" style="direction: ltr;text-align:left; margin-top: 10px ">
-            <input class="form-control mr-sm-2" tye="search" placeholder="در همه چیز بگردید" aria-label="Search" name="search" id="search" style="text-align: right">
-            <button class="btn-solid-reg page-scroll" type="submit" style="font-family: IRANSans">جستجو کردن</button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <form id="search-bar" class="form-inline" method="get" action="{{route('search')}}">
+            <input class="form-control mr-sm-2" type="search"  placeholder="در همه چیز بگردید" aria-label="Search" name="search" id="search">
+            <button class="btn-solid-reg page-scroll" type="submit">جستجو کردن</button>
         </form>
 
         <ul class="navbar-nav ml-auto">
@@ -130,10 +129,10 @@
                 @endif
             </li>
         </ul>
-        <span class="nav-item social-icons" style="text-align: right">
+        <span id="social" class="nav-item social-icons">
                 <span class="fa-stack">
                     <a href="#">
-                        <span class="hexagon" style="text-align: right"></span>
+                        <span class="hexagon"></span>
                         <i class="fab fa-facebook-f fa-stack-1x"></i>
                     </a>
                 </span>
@@ -153,13 +152,13 @@
 @yield('content')
 
 <!-- Footer -->
-<div id="footer" class="footer"  style="direction: rtl;text-align: right">
+<div id="footer" class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="text-container about">
                     <h4>رسانه اینترنتی دارک مووی</h4>
-                    <p class="white" dir="rtl" align="right" style=" font-size: 14pt ; ">تمام
+                    <p class="white" dir="rtl" align="right">تمام
                         تمامی حقوق اين وبسايت متعلق به رسانه اینترنتی دارک مووی بوده و هرگونه کپي برداری به دور از اخلاق می باشد. مدیریت دارک مووی</p>
                 </div>
             </div>

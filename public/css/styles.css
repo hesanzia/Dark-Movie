@@ -79,6 +79,7 @@ a.green {
 a.white,
 .white {
 	color: #dfe5ec;
+    font-size: 14pt ;
 }
 
 .testimonial-text {
@@ -541,7 +542,7 @@ input[type='checkbox'] {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: #113448;
+	background: #0b0b0b;
 }
 
 .spinner {
@@ -598,7 +599,7 @@ input[type='checkbox'] {
 .navbar-custom {
 	padding-top: 0.375rem;
 	padding-bottom: 0.375rem;
-	background-color: #113448;
+	background-color: #0b0b0b;
 	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
 	font: 600 0.875rem/0.875rem "Century Gothic", "IRAN Sans" ;
 	transition: all 0.2s;
@@ -644,6 +645,7 @@ input[type='checkbox'] {
 	display: block; /* this makes the dropdown menu stay open while hovering it */
 	min-width: auto;
 	animation: fadeDropdown 0.2s; /* required for the fade animations */
+    text-align: center;
 }
 
 @keyframes fadeDropdown {
@@ -664,7 +666,7 @@ input[type='checkbox'] {
 	margin-top: 0;
 	border: none;
 	border-radius: 0.25rem;
-	background-color: #113448;
+	background-color: #0b0b0b;
 }
 
 .navbar-custom .dropdown-item {
@@ -673,7 +675,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item:hover {
-	background-color: #113448;
+	background-color: #0b0b0b;
 }
 
 .navbar-custom .dropdown-item .item-text {
@@ -723,7 +725,6 @@ input[type='checkbox'] {
 	margin-right: 0.125rem;
 }
 
-
 /*********************/
 /*    04. Header     */
 /*********************/
@@ -757,7 +758,11 @@ input[type='checkbox'] {
 	margin-right: 0.5rem;
 	margin-bottom: 1.25rem;
 }
-
+/*
+.custom-header{
+    margin-top: 100px;
+}
+*/
 
 /*********************/
 /*     05. Intro     */
@@ -1673,7 +1678,9 @@ input[type='checkbox'] {
 /**********************/
 .footer {
 	padding-top: 5rem;
-	background-color: #113448;
+	background-color: #0b0b0b;
+    direction: rtl;
+    text-align: right;
 }
 
 .footer .text-container {
@@ -1698,7 +1705,7 @@ input[type='checkbox'] {
 .copyright {
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
-	background-color: #113448;
+	background-color: #0b0b0b;
 	text-align: center;
 }
 
@@ -1737,7 +1744,7 @@ a:hover.back-to-top {
 .ex-header {
 	padding-top: 8rem;
 	padding-bottom: 5rem;
-	background-color: #153e52;
+	background-color: #0b0b0b;
 	text-align: center;
 }
 
@@ -1795,8 +1802,83 @@ a:hover.back-to-top {
 	margin-top: 1.75rem;
 }
 
+/*********************/
+/*    21. Extra      */
+/*********************/
+#search-bar{
+    direction: ltr;
+    text-align:left;
+    margin-top: 10px;
+    font-family: "IRAN Sans";
+}
+
+#search{
+    text-align: right;
+}
+
+.show-movie{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family:'IRAN Sans','Century Gothic';
+}
+.show-movie a{
+    text-decoration: none;
+}
+
+.show-movie h2{
+    background-color: #0b0b0b;
+    color: white;
+    font-family:'IRAN Sans','Century Gothic';
+}
+
+.card-body-movie{
+    text-align: right;
+    direction: rtl;
+    background-color: #0b0b0b;
+    color: white;
+    font-family:'IRAN Sans','Century Gothic';
+}
+
+.card-body-movie p{
+    color: white;
+}
+
+.card-body-movie h5{
+    color: white;
+    font-family:'IRAN Sans','Century Gothic';
+}
+.card-body-movie h5 i{
+    color: gold;
+}
+
+#show-serial{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family:'IRAN Sans','Century Gothic';
+}
+
+#show-serial a{
+    text-decoration: none;
+}
+
+#show-serial h5{
+    background-color: #0b0b0b;
+    color: white;
+    font-family:'IRAN Sans','Century Gothic';
+}
+
+#card-serial{
+    text-align: right;
+    direction: rtl;
+    background-color: #0b0b0b;
+    color: white;
+}
+#card-serial h5 i{
+    color: gold;
+}
+
 /*****************************/
-/*     21. Media Queries     */
+/*     22. Media Queries     */
 /*****************************/
 /* Min-width width 768px */
 @media (min-width: 768px) {
@@ -1812,9 +1894,15 @@ a:hover.back-to-top {
 
 	/* Navigation */
 	.navbar-custom {
+        direction: rtl;
+        position: absolute;
+		/*
 		padding: 2.125rem 1.5rem 2.125rem 2rem;
+		 */
 		box-shadow: none;
-        background: transparent;
+        /*
+            background: transparent;
+         */
 	}
 
 	.navbar-custom .navbar-brand.logo-text {
@@ -1838,7 +1926,7 @@ a:hover.back-to-top {
 	.navbar-custom.top-nav-collapse {
         padding: 0.375rem 1.5rem 0.375rem 2rem;
 		box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
-		background-color: #113448;
+		background-color: #0b0b0b;
 	}
 
 	.navbar-custom.top-nav-collapse .navbar-brand.logo-text {
@@ -1994,6 +2082,8 @@ a:hover.back-to-top {
 	.navbar-custom .social-icons {
 		display: block;
 		margin-left: 0.5rem;
+        text-align: right;
+
 	}
 
 	.navbar-custom .fa-stack {

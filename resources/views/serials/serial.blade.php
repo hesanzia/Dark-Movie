@@ -12,21 +12,21 @@
         <div class="row">
             @foreach($serials as $serial)
                 <div class="col-lg-12">
-                    <div class="card mb-3">
-                        <a href="{{route('serials.show',$serial->id)}}" style="text-decoration: none;"><h2 class="card-header" style="background-color: #14bf98;color: white;font-family:IRANSans" >{{$serial->name}}</h2></a>
+                    <div class="card mb-3  show-movie">
+                        <a href="{{route('serials.show',$serial->id)}}" ><h2 class="card-header">{{$serial->name}}</h2></a>
                         <img class="card-img-top" src="{{asset($serial->pic)}}" alt="Card image cap">
-                        <div class="card-body" style="text-align: right; direction: rtl; background-color: #14bf98;">
-                            <p class="card-text" style="color: white">{{$serial->description}}</p>
+                        <div class="card-body card-body-movie">
+                            <p class="card-text" >{{$serial->description}}</p>
                             <br>
                             <div class="row" >
                                 <div class="col-sm-8">
-                                    <h5 style="color: white;font-family:IRANSans">پخش از شبکه : {{$serial->channel()->name}}</h5>
+                                    <h5 >پخش از شبکه : {{$serial->channel()->name}}</h5>
                                 </div>
                                 <div class="col-sm-3" >
-                                    <h5 style="color: white;font-family:IRANSans"><span><i class="fa fa-star" aria-hidden="true" style="color: gold"></i> {{$serial->score}}/10</span></h5>
+                                    <h5 ><span><i class="fa fa-star" aria-hidden="true"></i> {{$serial->score}}/10</span></h5>
                                 </div>
                                 <div class="col-sm-3">
-                                    <h5 style="color: white;font-family:IRANSans"> ژانر : {{$serial->genre}}</h5>
+                                    <h5> ژانر : {{$serial->genre}}</h5>
                                 </div>
                             </div>
                         </div>
