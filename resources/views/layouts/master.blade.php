@@ -147,6 +147,8 @@
     </div>
 </nav>
 
+@yield('background')
+
 <!-- Content -->
 @yield('content')
 
