@@ -121,13 +121,9 @@
                 <a class="nav-link page-scroll" href="#footer">تماس با ما</a>
             </li>
 
-            <li class="nav-item">
-                @if(Auth::guest())
-                    <a class="nav-link page-scroll" href="register">نام نویسی | ورود</a>
-                @else
-                    <a class="nav-link page-scroll" href="{{route('dashboard')}}">{{ Auth::user()->name }}</a>
-                @endif
-            </li>
+            @yield('nav-item')
+
+            @yield('nav-item-login')
         </ul>
         <span id="social" class="nav-item social-icons">
                 <span class="fa-stack">

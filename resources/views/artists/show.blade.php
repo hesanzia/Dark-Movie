@@ -3,14 +3,25 @@
 <!-- Title -->
 @section('title','بازیگران زن - رسانه اینترنتی دارک مووی')
 
+<!-- Login -->
+@section('nav-item-login')
+    <li class="nav-item">
+        @if(Auth::guest())
+            <a class="nav-link page-scroll" href="register">نام نویسی | ورود</a>
+        @else
+            <a class="nav-link page-scroll" href="{{route('dashboard')}}">{{ Auth::user()->name }}</a>
+        @endif
+    </li>
+@endsection
+
 <!-- Billboard -->
 @extends('layouts.billboard')
 
 <!-- Content -->
 @section('content')
-    <div class="container" style="direction: rtl;text-align: right;font-family: IRANSans; margin-bottom: 10px;margin-top: 10px">
+    <div class="container show-artist">
         <div class="card">
-            <h2 class="card-header" style="background-color: #14bf98;color: white;font-family: IRANSans; text-align: left">{{$artist->name}}</h2>
+            <h2 class="card-header card-header-artist">{{$artist->name}}</h2>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="card-body">
@@ -20,11 +31,11 @@
                         <p class="card-text text-justify">{{$artist->about}}</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div id="director" class="basic-2" style="background: white">
+                <div class="col-lg-4 ">
+                    <div class="basic-2 show-profile">
                         <div class="container">
                             <div class="row">
-                                <div class="col-sm-12" style="direction: ltr;text-align: left">
+                                <div class="col-sm-12">
                                     <div class="team-member">
                                         <div class="image-wrapper">
                                             @if(Auth::guest())
@@ -39,31 +50,32 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
-                <div class="col-lg-12" style="text-align: center">
-                    <h2 style="font-family: IRANSans">فیلم ها</h2>
+                <div class="col-lg-12 custom-title">
+                    <h2>فیلم ها</h2>
                 </div>
             </div>
-            <div class="row"  style="direction: ltr;text-align: left">
+
+            <div class="row custom-row">
                 <div class="container">
                     <div class="row">
                         @foreach($artist->movies as $movie)
-                            <div class="col-md-4">
-                                <div class="cards-2" style="background: white">
-                                    <a href="{{route('movies.show',$movie->id)}}" style="text-decoration: none"><h5 class="card-header" style="background-color: #14bf98;color: white;font-family: IRANSans;">{{$movie->name}}</h5></a>
+                            <div class="col-md-4 show-serial">
+                                <div class="cards-2">
+                                    <a href="{{route('movies.show',$movie->id)}}"><h5 class="card-header">{{$movie->name}}</h5></a>
                                     <img class="card-img-top" src="{{asset($movie->pic)}}" alt="Card image cap">
-                                    <div class="card-body" style="text-align: right;direction: rtl;background-color: #14bf98;color: white">
+                                    <div class="card-body card-serial">
                                         <div class="row">
                                             <div class="col-sm-5">
-                                                <h5 style="color: white;font-family:IRANSans"> ژانر : {{$movie->genre}}</h5>
+                                                <h5> ژانر : {{$movie->genre}}</h5>
                                             </div>
                                             <div class="col-sm-5">
-                                                <h5 style="color: white;font-family:IRANSans"><span><i class="fa fa-star" aria-hidden="true" style="color: gold"></i> {{$movie->score}}/10</span></h5>
+                                                <h5><span><i class="fa fa-star" aria-hidden="true"></i> {{$movie->score}}/10</span></h5>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         @endforeach
                     </div>
@@ -71,26 +83,26 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-12" style="text-align: center">
-                    <h2 style="font-family: IRANSans">سریال ها</h2>
+                <div class="col-lg-12 custom-title">
+                    <h2>سریال ها</h2>
                 </div>
             </div>
 
-            <div class="row" style="direction: ltr;text-align: left">
+            <div class="row custom-row">
                 <div class="container">
                     <div class="row">
                         @foreach($artist->serials as $serial)
-                            <div class="col-md-4">
+                            <div class="col-md-4 show-serial">
                                 <div class="cards-2" >
-                                    <a href="{{route('serials.show',$serial->id)}}" style="text-decoration: none"><h5 class="card-header" style="background-color: #14bf98;color: white;font-family: IRANSans;">{{$serial->name}}</h5></a>
+                                    <a href="{{route('serials.show',$serial->id)}}"><h5 class="card-header">{{$serial->name}}</h5></a>
                                     <img class="card-img-top" src="{{asset($serial->pic)}}" alt="Card image cap">
-                                    <div class="card-body" style="text-align: right;direction: rtl;background-color: #14bf98;color: white">
+                                    <div class="card-body card-serial">
                                         <div class="row">
                                             <div class="col-sm-5">
-                                                <h5 style="color: white;font-family:IRANSans"> ژانر : {{$serial->genre}}</h5>
+                                                <h5> ژانر : {{$serial->genre}}</h5>
                                             </div>
                                             <div class="col-sm-5">
-                                                <h5 style="color: white;font-family:IRANSans"><span><i class="fa fa-star" aria-hidden="true" style="color: gold"></i> {{$serial->score}}/10</span></h5>
+                                                <h5><span><i class="fa fa-star" aria-hidden="true"></i> {{$serial->score}}/10</span></h5>
                                             </div>
                                         </div>
                                     </div>

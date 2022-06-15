@@ -2,6 +2,17 @@
 
 @section('title','صفحه نخست - رسانه اینترنتی دارک مووی')
 
+<!-- Login -->
+@section('nav-item-login')
+    <li class="nav-item">
+        @if(Auth::guest())
+            <a class="nav-link page-scroll" href="register">نام نویسی | ورود</a>
+        @else
+            <a class="nav-link page-scroll" href="{{route('dashboard')}}">{{ Auth::user()->name }}</a>
+        @endif
+    </li>
+@endsection
+
 @extends('layouts.billboard')
 
 @section('content')
@@ -33,10 +44,10 @@
 
             <div class="col-md-4">
                 @foreach($serials as $serial)
-                    <div id="show-serial" class="card">
+                    <div class="card show-serial">
                         <a href="{{route('serials.show',$serial->id)}}"><h5 class="card-header">{{$serial->name}}</h5></a>
                         <img class="card-img-top" src="{{asset($serial->pic)}}" alt="Card image cap">
-                        <div id="card-serial" class="card-body">
+                        <div class="card-body card-serial">
                             <div class="row">
                                 <div class="col-sm-5">
                                     <h5> ژانر : {{$serial->genre}}</h5>

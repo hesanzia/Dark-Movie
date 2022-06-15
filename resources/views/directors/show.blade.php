@@ -5,6 +5,17 @@
         {{$director->name}}
 @endsection
 
+<!-- Login -->
+@section('nav-item-login')
+    <li class="nav-item">
+        @if(Auth::guest())
+            <a class="nav-link page-scroll" href="register">نام نویسی | ورود</a>
+        @else
+            <a class="nav-link page-scroll" href="{{route('dashboard')}}">{{ Auth::user()->name }}</a>
+        @endif
+    </li>
+@endsection
+
 <!-- Billboard -->
 @extends('layouts.billboard')
 

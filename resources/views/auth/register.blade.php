@@ -3,15 +3,26 @@
 <!-- Title -->
 @section('title','نام نویسی - رسانه اینترنتی دارک مووی')
 
+<!-- Login -->
+@section('nav-item-login')
+    <li class="nav-item">
+        @if(Auth::guest())
+            <a class="nav-link page-scroll" href="register">نام نویسی | ورود</a>
+        @else
+            <a class="nav-link page-scroll" href="{{route('dashboard')}}">{{ Auth::user()->name }}</a>
+        @endif
+    </li>
+@endsection
+
 <!-- Header -->
 @extends('layouts.header')
 
 <!-- Content -->
 @section('content')
-    <div class="container" style="margin-top: 50px; margin-bottom: 50px;direction: rtl">
+    <div class="container log-reg">
         <div class="row justify-content-center">
-            <div class="col-md-8" style="margin-top: 100px">
-                <div style="text-align: center">
+            <div class="col-md-8">
+                <div class="custom-title">
                     <img src={{asset('Image/Backgound/aparat_logo.png')}}>
                 </div>
                 <div class="card">
@@ -70,7 +81,7 @@
                             </div>
 
                             <div class="form-group row mb-0">
-                                <div class="col-lg-9 offset-md-4" style="margin-right: 40px">
+                                <div class="col-lg-9 offset-md-4" >
                                     <button type="submit" class="btn-solid-reg page-scroll">
                                         نام نویسی
                                     </button>
