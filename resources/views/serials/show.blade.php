@@ -29,28 +29,28 @@
 
 <!-- Content -->
 @section('content')
-    <div class="container" style="direction: rtl;text-align: right;font-family: IRANSans; margin-bottom: 10px;margin-top: 10px">
+    <div class="container movie-page">
         <div class="card">
-            <h2 class="card-header" style="background-color: #14bf98;color: white;font-family: IRANSans; text-align: left">{{$serial->name}}</h2>
-            <div class="card-body">
+            <h2 class="card-header card-header-artist">{{$serial->name}}</h2>
+            <div class="card-body card-body-movie-show">
 
                 <h5 class="card-title">خلاصه داستان</h5>
                 <p class="card-text">{{$serial->description}}</p>
-                <a href="{{route('drama')}}" style="text-decoration: none"><h5 class="card-title">ژانر : {{$serial->genre}}</h5></a>
-                <h5><span><i class="fa fa-star" aria-hidden="true" style="color: gold"></i> {{$serial->score}}/10</span></h5>
+                <a href="{{route('drama')}}"><h5 class="card-title">ژانر : {{$serial->genre}}</h5></a>
+                <h5><span><i class="fa fa-star" aria-hidden="true"></i> {{$serial->score}}/10</span></h5>
                 <h5 class="card-title">شبکه سازنده : {{$serial->channel()->name}}</h5>
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12" style="direction: ltr;text-align: left">
+                        <div class="col-lg-12 custom-btn">
                             <div class="row">
-                                <a href="#links" class="btn-solid-reg page-scroll" data-toggle="collapse" aria-expanded="false" aria-controls="links" style="direction: ltr;text-align: left">نمایش لینک های دانلود</a>
+                                <a href="#links" class="btn-solid-reg page-scroll" data-toggle="collapse" aria-expanded="false" aria-controls="links">نمایش لینک های دانلود</a>
                             </div>
                             <div class="row">
-                                <div class="col-lg-12" style="margin-top: 5px">
+                                <div class="col-lg-12">
                                     <div class="collapse" id="links">
                                         <div class="card card-body">
-                                            <table class="table" style="text-align: right;direction: rtl">
+                                            <table class="table custom-table">
                                                 <thead>
                                                 <tr>
                                                     <th scope="col">عنوان</th>
@@ -61,7 +61,7 @@
                                                 @foreach($serial->links() as $link)
                                                     <tr>
                                                         <td>{{$link->name}}</td>
-                                                        <td><a href="{{$link->link}}" style="text-decoration: none">{{$link->link}}</a></td>
+                                                        <td><a href="{{$link->link}}">{{$link->link}}</a></td>
                                                     </tr>
                                                 @endforeach
                                                 </tbody>
@@ -74,14 +74,14 @@
                     </div>
                 </div>
 
-                <div id="artist" class="basic-2">
+                <div id="artist" class="basic-2 show-profile">
                     <div class="container">
 
                         <div class="row">
                             <div class="col-lg-12">
-                                <h5 style="font-family: IRANSans">بازیگران</h5>
+                                <h5>بازیگران</h5>
                             </div>
-                            <div class="col-lg-12" style="margin-top: 25px">
+                            <div class="col-lg-12">
                                 @foreach($serial->artists as $artist)
                                     <div class="team-member">
                                         <div class="image-wrapper">
@@ -110,7 +110,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12" style="direction: rtl;text-align: right">
+                            <div class="col-lg-12 comment">
 
                                 @comments(['model' => $serial])
 

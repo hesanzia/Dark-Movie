@@ -19,7 +19,7 @@
 
 <!-- Content -->
 @section('content')
-    <div class="container" style="margin-top: 10px;margin-bottom: 10px;font-family:IRANSans">
+    <div class="container">
         <div class="row">
             @foreach($serials as $serial)
                 <div class="col-lg-12">

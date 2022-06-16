@@ -23,7 +23,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="custom-title">
-                    <img src={{asset('Image/Backgound/aparat_logo.png')}}>
+                    <img src={{asset('Image/Backgound/logo.png')}}>
                 </div>
                 <div class="card">
                     <div class="card-body">

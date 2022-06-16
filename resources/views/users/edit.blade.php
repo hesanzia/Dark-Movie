@@ -19,8 +19,8 @@
 
 <!-- Content -->
 @section('content')
-    <div class="row" style="text-align: right;direction: rtl">
-        <div class="col-lg-12" style="margin-bottom: 100px;margin-top: 100px">
+    <div class="row">
+        <div class="col-lg-12 custom-form-1">
             <div class="container">
                 <form method="post" action="{{route('users.update',$user->id)}}">
                     @csrf
@@ -34,10 +34,10 @@
                             @endforeach
                         </select>
                         @error('roles')
-                        <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                        <p class="text-sm text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
-                    <button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px"> ویرایش </button></a>
+                    <button type="submit" class="btn-solid-reg page-scroll"> ویرایش </button></a>
                 </form>
             </div>
         </div>

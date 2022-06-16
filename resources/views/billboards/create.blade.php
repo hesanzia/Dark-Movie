@@ -19,13 +19,12 @@
 
 <!-- Content -->
 @section('content')
-    <div class="row" style="direction: rtl;text-align: right">
-        <div class="col-lg-12" style="margin-bottom: 100px;margin-top: 100px">
+    <div class="row">
+        <div class="col-lg-12 custom-form-1">
             <div class="container">
                 <form method="post" action="{{ route('billboards.store') }}">
                     @csrf
                     <div class="">
-
                         <div class="form-group">
                             <label for="movie_id"> فیلم</label>
                             <select name="movie_id" id="movie_id" class="custom-select">
@@ -34,11 +33,11 @@
                                 @endforeach
                             </select>
                             @error('movie_id')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
 
-                        <button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px"> افزودن </button></a>
+                        <button type="submit" class="btn-solid-reg page-scroll"> افزودن </button></a>
                     </div>
                 </form>
             </div>

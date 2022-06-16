@@ -26,7 +26,7 @@
     <link href="{{asset('css/swiper.css')}}" rel="stylesheet">
     <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
     <link href="{{asset('css/styles.css')}}" rel="stylesheet">
-    <link rel="icon" href="{{asset('Image/Backgound/title_icon.ico')}}">
+    <link rel="icon" href="{{asset('favicon.ico')}}">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
 
@@ -40,7 +40,7 @@
 
 <!--Navbar -->
 <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-    <a class="navbar-brand logo-text page-scroll" href="{{route('home')}}"><img src="{{asset('Image/Backgound/2_1.png')}}"></a>
+    <a class="navbar-brand logo-text page-scroll" href="{{route('home')}}"><img src="{{asset('Image/Backgound/logo v2.png')}}"></a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="container h-100">
             <div class="d-flex justify-content-center h-100">

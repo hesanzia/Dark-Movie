@@ -1024,6 +1024,43 @@ a:hover.back-to-top {
     direction: rtl;
 }
 
+.movie-page{
+
+    direction: rtl;
+    text-align: right;
+    font-family: "Century Gothic,IRAN Sans";
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.card-body-movie-show{
+    text-align: right;
+    direction: rtl;
+    font-family:'IRAN Sans','Century Gothic';
+}
+.card-body-movie-show a{
+    text-decoration: none;
+}
+
+.card-body-movie-show h5{
+    font-family:'IRAN Sans','Century Gothic';
+}
+.card-body-movie-show h5 i{
+    color: gold;
+}
+.custom-btn{
+    direction: ltr;
+    text-align: left;
+}
+
+.comment{
+    direction: rtl;
+    text-align: right;
+}
+.custom-table{
+    text-align: right;
+    direction: rtl;
+}
+
 /*****************************/
 /*     10. Media Queries     */
 /*****************************/

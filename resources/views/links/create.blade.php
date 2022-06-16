@@ -19,18 +19,17 @@
 
 <!-- Content -->
 @section('content')
-    <div class="row" style="direction: rtl;text-align: right">
-        <div class="col-lg-12" style="margin-bottom: 100px;margin-top: 100px">
+    <div class="row">
+        <div class="col-lg-12 custom-form-1">
             <div class="container">
                 <form method="post" action="{{ route('links.store') }}">
                     @csrf
                     <div class="">
-
                         <div class="form-group">
                             <label for="name">عنوان لینک</label>
                             <input type="text" name="name" id="name" class="form-control"/>
                             @error('name')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -38,7 +37,7 @@
                             <label for="link">لینک</label>
                             <input type="text" name="link" id="link" class="form-control"/>
                             @error('link')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -50,11 +49,10 @@
                                 @endforeach
                             </select>
                             @error('serial_id')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
-
-                        <button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px"> افزودن </button></a>
+                        <button type="submit" class="btn-solid-reg page-scroll"> افزودن </button></a>
                     </div>
                 </form>
             </div>

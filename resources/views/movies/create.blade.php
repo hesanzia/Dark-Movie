@@ -19,8 +19,8 @@
 
 <!-- Content -->
 @section('content')
-    <div class="row" style="direction: rtl;text-align: right">
-        <div class="col-lg-12" style="margin-bottom: 100px;margin-top: 100px">
+    <div class="row" >
+        <div class="col-lg-12 custom-form-1">
             <div class="container">
                 <form method="post" action="{{ route('movies.store') }}">
                     @csrf
@@ -29,7 +29,7 @@
                             <label for="name">نام فیلم</label>
                             <input type="text" name="name" id="name" class="form-control"/>
                             @error('name')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -37,7 +37,7 @@
                             <label for="score">امتیاز IMDB</label>
                             <input type="text" name="score" id="score" class="form-control"/>
                             @error('score')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -49,7 +49,7 @@
                                 @endforeach
                             </select>
                             @error('director_id')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -68,7 +68,7 @@
                                 <option>علمی تخیلی</option>
                             </select>
                             @error('genre')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -81,7 +81,7 @@
                                 <option>1080p BlueRay</option>
                             </select>
                             @error('quality')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -89,38 +89,38 @@
                             <label for="year">سال ساخت</label>
                             <input type="date" name="year" id="year" class="form-control" />
                             @error('year')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="description">خلاصه داستان</label>
                             <input type="text" name="description" id="description" class="form-control-textarea" />
                             @error('description')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="link" >لینک دانلود</label>
                             <input type="text" name="link" id="link" class="form-control" />
                             @error('link')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="pic">آپلود عکس کوچک</label>
                             <input type="text" name="pic" id="pic" class="form-control"/>
                             @error('pic')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="background">آپلود عکس صفحه</label>
                             <input type="text" name="background" id="background" class="form-control"/>
                             @error('background')
-                            <p class="text-sm text-red-600" style="color: red">{{ $message }}</p>
+                            <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
-                        <button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px"> افزودن </button></a>
+                        <button type="submit" class="btn-solid-reg page-scroll"> افزودن </button></a>
                     </div>
                 </form>
             </div>
