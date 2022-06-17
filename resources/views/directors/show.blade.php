@@ -23,7 +23,7 @@
 @section('content')
     <div class="container show-artist">
         <div class="card">
-            <h2 class="card-header card-header-artist">{{$director->name}}</h2>
+            <h2 class="card-header show-card-header">{{$director->name}}</h2>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="card-body">
@@ -34,11 +34,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div id="director" class="basic-2 show-profile">
+                    <div id="director" class="basic-2 show-artist-pic">
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <div class="team-member">
+                                    <div class="artist">
                                         <div class="image-wrapper">
                                             @if(Auth::guest())
                                             @else
@@ -62,10 +62,10 @@
                     <div class="row">
                         @foreach($director->movies() as $movie)
                             <div class="col-md-4">
-                                <div class="cards-2  show-serial">
+                                <div class="cards-2  show-content">
                                     <a href="{{route('movies.show',$movie->id)}}" ><h5 class="card-header">{{$movie->name}}</h5></a>
                                     <img class="card-img-top" src="{{asset($movie->pic)}}" alt="Card image cap">
-                                    <div class="card-body card-serial">
+                                    <div class="card-body show-content-body">
                                         <div class="row">
                                             <div class="col-sm-5">
                                                 <h5> ژانر : {{$movie->genre}}</h5>

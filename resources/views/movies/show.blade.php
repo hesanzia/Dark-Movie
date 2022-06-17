@@ -29,10 +29,10 @@
 
 <!-- Content -->
 @section('content')
-    <div class="container movie-page">
+    <div class="container show-page">
         <div class="card">
-            <h2 class="card-header card-header-artist">{{$movie->name}}</h2>
-            <div class="card-body card-body-movie-show">
+            <h2 class="card-header show-card-header">{{$movie->name}}</h2>
+            <div class="card-body show-card-body">
 
                 <h5 class="card-title">خلاصه داستان</h5>
                 <p class="card-text">{{$movie->description}}</p>
@@ -42,14 +42,14 @@
                 <div class="col-sm-12 custom-btn">
                     <a href="{{$movie->link}}" class="btn-solid-reg page-scroll"> {{$movie->quality}} - دانلود</a>
                 </div>
-                <div id="artist" class="basic-2 show-profile">
+                <div class="basic-2 show-artist-pic">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
                                 <h5>کارگردان</h5>
                             </div>
                             <div class="col-lg-12">
-                                <div class="team-member">
+                                <div class="artist">
                                     <div class="image-wrapper">
                                         @if(Auth::guest())
                                         @else
@@ -80,7 +80,7 @@
                             </div>
                             <div class="col-lg-12">
                                 @foreach($movie->artists as $artist)
-                                    <div class="team-member">
+                                    <div class="artist">
                                         <div class="image-wrapper">
                                             @if(Auth::guest())
                                             @else

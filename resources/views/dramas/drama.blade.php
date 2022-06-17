@@ -22,10 +22,10 @@
             @foreach($movies as $movie)
                 @if($movie->genre == 'درام')
                     <div class="col-lg-12">
-                        <div class="card mb-3 show-movie">
+                        <div class="card mb-3 show-content">
                             <a href="{{route('movies.show',$movie->id)}}"><h2 class="card-header">{{$movie->name}}</h2></a>
                             <img class="card-img-top" src="{{asset($movie->pic)}}" alt="Card image cap">
-                            <div class="card-body card-body-movie">
+                            <div class="card-body show-content-body">
                                 <p class="card-text">{{$movie->description}}</p>
                                 <br>
                                 <div class="row" >

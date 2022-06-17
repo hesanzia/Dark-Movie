@@ -19,14 +19,13 @@
 
 <!-- Content -->
 @section('content')
-
-    <div id="artists" class="basic-2">
+    <div class="basic-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     @foreach($artists as $artist)
                         @if($artist->gender == 'مرد')
-                            <div class="team-member">
+                            <div class="artist">
                                 <div class="image-wrapper">
                                     @if(Auth::guest())
                                     @else

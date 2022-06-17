@@ -21,7 +21,7 @@
 @section('content')
     <div class="container show-artist">
         <div class="card">
-            <h2 class="card-header card-header-artist">{{$artist->name}}</h2>
+            <h2 class="card-header show-card-header">{{$artist->name}}</h2>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="card-body">
@@ -32,11 +32,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 ">
-                    <div class="basic-2 show-profile">
+                    <div class="basic-2 show-artist-pic">
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <div class="team-member">
+                                    <div class="artist">
                                         <div class="image-wrapper">
                                             @if(Auth::guest())
                                             @else
@@ -61,11 +61,11 @@
                 <div class="container">
                     <div class="row">
                         @foreach($artist->movies as $movie)
-                            <div class="col-md-4 show-serial">
+                            <div class="col-md-4 show-content">
                                 <div class="cards-2">
                                     <a href="{{route('movies.show',$movie->id)}}"><h5 class="card-header">{{$movie->name}}</h5></a>
                                     <img class="card-img-top" src="{{asset($movie->pic)}}" alt="Card image cap">
-                                    <div class="card-body card-serial">
+                                    <div class="card-body show-content-body">
                                         <div class="row">
                                             <div class="col-sm-5">
                                                 <h5> ژانر : {{$movie->genre}}</h5>
@@ -92,11 +92,11 @@
                 <div class="container">
                     <div class="row">
                         @foreach($artist->serials as $serial)
-                            <div class="col-md-4 show-serial">
+                            <div class="col-md-4 show-content">
                                 <div class="cards-2" >
                                     <a href="{{route('serials.show',$serial->id)}}"><h5 class="card-header">{{$serial->name}}</h5></a>
                                     <img class="card-img-top" src="{{asset($serial->pic)}}" alt="Card image cap">
-                                    <div class="card-body card-serial">
+                                    <div class="card-body show-content-body">
                                         <div class="row">
                                             <div class="col-sm-5">
                                                 <h5> ژانر : {{$serial->genre}}</h5>

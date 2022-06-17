@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <form id="search-bar" class="form-inline" method="get" action="{{route('search')}}">
+        <form id="search-form" class="form-inline" method="get" action="{{route('search')}}">
             <input class="form-control mr-sm-2" type="search"  placeholder="در همه چیز بگردید" aria-label="Search" name="search" id="search">
             <button class="btn-solid-reg page-scroll" type="submit">جستجو کردن</button>
         </form>

@@ -25,51 +25,50 @@
 @extends('layouts.header')
 
 @section('content')
-    <div class="col-lg-12" style="text-align: right;direction: rtl;margin-top: 50px">
+    <div class="col-lg-12 dashboard">
         <div class="row my-2">
             <div class="col-lg-12 order-lg-2">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a href="" data-target="#profile" data-toggle="tab" class="nav-link active" style="text-decoration: none"><img src="{{asset('Image/Dashboard/profile.ico')}}">پروفایل</a>
+                        <a href="" data-target="#profile" data-toggle="tab" class="nav-link active"><img src="{{asset('Image/Dashboard/profile.ico')}}">پروفایل</a>
                     </li>
                     @can('admin')
                         <li class="nav-item">
-                            <a href="" data-target="#users" data-toggle="tab" class="nav-link" style="text-decoration: none"><img src="{{asset('Image/Dashboard/user.ico')}}">  کاربران </a>
+                            <a href="" data-target="#users" data-toggle="tab" class="nav-link" ><img src="{{asset('Image/Dashboard/user.ico')}}">  کاربران </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" data-target="#movies" data-toggle="tab" class="nav-link" style="text-decoration: none"><img src="{{asset('Image/Dashboard/movie.ico')}}">  فیلم ها </a>
+                            <a href="" data-target="#movies" data-toggle="tab" class="nav-link"><img src="{{asset('Image/Dashboard/movie.ico')}}">  فیلم ها </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" data-target="#directors" data-toggle="tab" class="nav-link" style="text-decoration: none"><img src="{{asset('Image/Dashboard/director.ico')}}">  کارگردان ها </a>
+                            <a href="" data-target="#directors" data-toggle="tab" class="nav-link"><img src="{{asset('Image/Dashboard/director.ico')}}">  کارگردان ها </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" data-target="#channels" data-toggle="tab" class="nav-link" style="text-decoration: none"><img src="{{asset('Image/Dashboard/channel.ico')}}"> شبکه ها </a>
+                            <a href="" data-target="#channels" data-toggle="tab" class="nav-link"><img src="{{asset('Image/Dashboard/channel.ico')}}"> شبکه ها </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" data-target="#series" data-toggle="tab" class="nav-link" style="text-decoration: none"><img src="{{asset('Image/Dashboard/serial.ico')}}">  سریال ها </a>
+                            <a href="" data-target="#series" data-toggle="tab" class="nav-link"><img src="{{asset('Image/Dashboard/serial.ico')}}">  سریال ها </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" data-target="#artists" data-toggle="tab" class="nav-link" style="text-decoration: none"><img src="{{asset('Image/Dashboard/artist.ico')}}">  بازیگرها </a>
+                            <a href="" data-target="#artists" data-toggle="tab" class="nav-link"><img src="{{asset('Image/Dashboard/artist.ico')}}">  بازیگرها </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" data-target="#billboard" data-toggle="tab" class="nav-link" style="text-decoration: none"><img src="{{asset('Image/Dashboard/billboard.ico')}}">  بیلبورد </a>
+                            <a href="" data-target="#billboard" data-toggle="tab" class="nav-link" ><img src="{{asset('Image/Dashboard/billboard.ico')}}">  بیلبورد </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" data-target="#links" data-toggle="tab" class="nav-link" style="text-decoration: none"><img src="{{asset('Image/Dashboard/link.ico')}}">  لینک های سریال </a>
+                            <a href="" data-target="#links" data-toggle="tab" class="nav-link"><img src="{{asset('Image/Dashboard/link.ico')}}">  لینک های سریال </a>
                         </li>
                     @endcan
 
                 </ul>
-                <div class="col-lg-12" style="direction: rtl;text-align: right">
-                    <div class="tab-content py-4" style="direction: rtl;text-align: right">
-
+                <div class="col-lg-12">
+                    <div class="tab-content py-4">
                         <div class="tab-pane active" id="profile">
                             <h3 class="mb-3">نام کاربری : {{Auth::user()->name}}</h3>
                             <div class="row">
@@ -127,7 +126,7 @@
                         <div class="tab-pane" id="movies">
                             <div class="col-md-12">
                                 <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span>مدیریت فیلم ها</h5>
-                                <a href="{{route('movies.create')}}"><button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px">افزودن</button></a>
+                                <a href="{{route('movies.create')}}"><button type="submit" class="btn-solid-reg page-scroll">افزودن</button></a>
                                 <table class="table table-sm table-hover table-striped">
                                     <thead>
                                     <tr>
@@ -175,7 +174,7 @@
                         <div class="tab-pane" id="directors">
                             <div class="col-md-12">
                                 <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> مدیریت کارگردان ها</h5>
-                                <a href="{{route('directors.create')}}"><button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px">افزودن</button></a>
+                                <a href="{{route('directors.create')}}"><button type="submit" class="btn-solid-reg page-scroll">افزودن</button></a>
                                 <table class="table table-sm table-hover table-striped">
                                     <thead>
                                     <tr>
@@ -219,7 +218,7 @@
                         <div class="tab-pane" id="channels">
                             <div class="col-md-12">
                                 <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> مدیریت شبکه ها</h5>
-                                <a href="{{route('channels.create')}}"><button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px">افزودن</button></a>
+                                <a href="{{route('channels.create')}}"><button type="submit" class="btn-solid-reg page-scroll">افزودن</button></a>
                                 <table class="table table-sm table-hover table-striped">
                                     <thead>
                                     <tr>
@@ -252,7 +251,7 @@
                         <div class="tab-pane" id="series">
                             <div class="col-md-12">
                                 <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> مدیریت سریال ها</h5>
-                                <a href="{{route('serials.create')}}"><button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px">افزودن</button></a>
+                                <a href="{{route('serials.create')}}"><button type="submit" class="btn-solid-reg page-scroll">افزودن</button></a>
                                 <table class="table table-sm table-hover table-striped">
                                     <thead>
                                     <tr>
@@ -296,7 +295,7 @@
                         <div class="tab-pane" id="artists">
                             <div class="col-md-12">
                                 <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span>مدیریت بازیگر ها</h5>
-                                <a href="{{route('artists.create')}}"><button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px">افزودن</button></a>
+                                <a href="{{route('artists.create')}}"><button type="submit" class="btn-solid-reg page-scroll">افزودن</button></a>
                                 <table class="table table-sm table-hover table-striped">
                                     <thead>
                                     <tr>
@@ -339,7 +338,7 @@
                         <div class="tab-pane" id="billboard">
                             <div class="col-md-12">
                                 <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> مدیریت بیلبورد</h5>
-                                <a href="{{route('billboards.create')}}"><button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px">افزودن</button></a>
+                                <a href="{{route('billboards.create')}}"><button type="submit" class="btn-solid-reg page-scroll">افزودن</button></a>
                                 <table class="table table-sm table-hover table-striped">
                                     <thead>
                                     <tr>
@@ -376,7 +375,7 @@
                         <div class="tab-pane" id="links">
                             <div class="col-md-12">
                                 <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> مدیریت لینک ها</h5>
-                                <a href="{{route('links.create')}}"><button type="submit" class="btn-solid-reg page-scroll" style="margin-bottom: 5px">افزودن</button></a>
+                                <a href="{{route('links.create')}}"><button type="submit" class="btn-solid-reg page-scroll">افزودن</button></a>
                                 <table class="table table-sm table-hover table-striped">
                                     <thead>
                                     <tr>
@@ -410,13 +409,10 @@
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 @endsection
